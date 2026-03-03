@@ -1,0 +1,8 @@
+order_id,customer_id,product,amount,order_date,status
+1001,1,Widget A,120.5,2023-01-20,completed
+1002,2,Widget B,,20/02/2023,Done
+1003,3,Widget C,75.0,03-15-2023,pending
+1004,,Widget A,200.0,2023-03-10,canceled
+1005,4,Widget D,,2023-04-01,Refund
+1006,,Widget E,50.0,01/05/2023,
+, ,Widget A,30.0,2023-06-01,completed

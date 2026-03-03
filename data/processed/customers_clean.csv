@@ -1,0 +1,7 @@
+customer_id,name,email,region,signup_date,is_valid_email
+1,Alice Smith,alice@example.com,North,2023-01-15,True
+4,Diana Prince,diana.prince@example,,2023-03-20,True
+customer_id,name,email,region,,False
+2,Bob Jones,bob.jones@example.com,South,,True
+3,Charlie,,West,,False
+5,Edward Nigma,,East,,False

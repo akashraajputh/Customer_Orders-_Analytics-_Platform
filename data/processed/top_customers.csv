@@ -1,0 +1,3 @@
+customer_id,name,region,total_spend,churned
+1,Alice Smith,North,120.5,True
+2,Bob Jones,South,75.0,True

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Business Analytics Dashboard</h1>
+    </header>
+
+    <main class="container">
+      <section class="card full-width">
+        <h2>Revenue Trend</h2>
+        <div class="filters">
+          <label>
+            From:
+            <input type="month" id="startMonth" />
+          </label>
+          <label>
+            To:
+            <input type="month" id="endMonth" />
+          </label>
+          <button id="applyDateFilter">Apply</button>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="revenueChart"></canvas>
+        </div>
+        <div class="status" id="revenueStatus"></div>
+      </section>
+
+      <section class="card">
+        <h2>Top Customers</h2>
+        <input
+          type="text"
+          id="customerSearch"
+          placeholder="Search customers..."
+        />
+        <div class="table-wrapper">
+          <table id="customersTable">
+            <thead>
+              <tr>
+                <th data-sort="name">Name</th>
+                <th data-sort="region">Region</th>
+                <th data-sort="total_spend">Total Spend</th>
+                <th data-sort="churned">Churned</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="status" id="customersStatus"></div>
+      </section>
+
+      <section class="card">
+        <h2>Category Breakdown</h2>
+        <div class="chart-wrapper">
+          <canvas id="categoryChart"></canvas>
+        </div>
+        <div class="status" id="categoryStatus"></div>
+      </section>
+
+      <section class="card full-width">
+        <h2>Region Summary</h2>
+        <div class="table-wrapper">
+          <table id="regionsTable">
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>Customers</th>
+                <th>Orders</th>
+                <th>Total Revenue</th>
+                <th>Avg Revenue / Customer</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="status" id="regionsStatus"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

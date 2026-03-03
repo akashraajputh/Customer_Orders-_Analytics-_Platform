@@ -1,0 +1,14 @@
+customer_id,name,email,region,signup_date
+1, Alice Smith ,ALICE@example.com,North,2023-01-15
+2,Bob Jones,bob.jones@EXAMPLE.com, South ,15/02/2023
+3,   Charlie   , ,West,03-10-2023
+3,   Charlie   ,charlie@example.com,West,2023-10-05
+4,Diana Prince,diana.prince@example, ,2023-03-20
+5,Edward Nigma,,East,invalid-date
+customer_id,name,email,region,signup_date
+1, Alice Smith ,ALICE@example.com,North,2023-01-15
+2,Bob Jones,bob.jones@EXAMPLE.com, South ,15/02/2023
+3,   Charlie   , ,West,03-10-2023
+3,   Charlie   ,charlie@example.com,West,2023-10-05
+4,Diana Prince,diana.prince@example, ,2023-03-20
+5,Edward Nigma,,East,invalid-date
