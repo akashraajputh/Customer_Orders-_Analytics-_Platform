@@ -1,0 +1,14 @@
+# Run backend API with CSV data bind-mounted from host.
+# From project root: docker-compose up --build
+# Then open http://localhost:8000/health and http://localhost:8000/api/revenue
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Bind-mount processed CSVs so the API can read them
+      - ./data/processed:/app/data/processed:ro
+    environment:
+      - DATA_DIR=/app/data/processed
+      - PYTHONUNBUFFERED=1

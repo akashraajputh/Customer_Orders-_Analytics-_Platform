@@ -1,16 +1,19 @@
 import argparse
+import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 
 def load_csv(path: Path) -> pd.DataFrame:
+    """Load a CSV file with explicit error handling for missing or empty files."""
     try:
         return pd.read_csv(path)
     except FileNotFoundError:
+        print(f"Error: File not found: {path}", file=sys.stderr)
         raise
     except pd.errors.EmptyDataError:
+        print(f"Error: CSV file is empty: {path}", file=sys.stderr)
         raise
 
 

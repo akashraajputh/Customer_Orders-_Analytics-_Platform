@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -6,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data" / "processed"
+DATA_DIR = Path(os.environ.get("DATA_DIR", str(BASE_DIR / "data" / "processed")))
 
 
 app = FastAPI(title="Analytics Dashboard API")

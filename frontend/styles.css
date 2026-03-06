@@ -125,6 +125,63 @@ th[data-sort]:hover {
   color: #e5e7eb;
 }
 
+/* Desktop: 1280px and above — comfortable grid */
+@media (min-width: 1280px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .card.full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile: 375px and below — single column, compact */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .chart-wrapper {
+    min-height: 200px;
+  }
+
+  .table-wrapper {
+    max-height: 280px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th,
+  td {
+    padding: 0.35rem 0.25rem;
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 480px) {
   .header h1 {
     font-size: 1.2rem;
