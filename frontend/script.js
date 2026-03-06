@@ -1,4 +1,4 @@
-const API_BASE = "https://customer-orders-analytics-platform.onrender.com/";
+const API_BASE = "https://customer-orders-analytics-platform.onrender.com";
 
 let revenueData = [];
 let customersData = [];
